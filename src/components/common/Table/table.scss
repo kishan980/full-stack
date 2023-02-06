@@ -1,0 +1,26 @@
+.table-container{
+  width: 100%;
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    color: lightgray;
+    font-size: 16x;
+  }
+  tr.selected {
+    background-color: rgba(65, 65, 66, 0.89);
+    color: #FFF;
+  }
+  th,td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid rgb(148, 148, 148);
+    min-width: 50px;
+  }
+  td {
+    font-size: 14px;
+    cursor: pointer;
+  }
+  td.noborder{
+    border-bottom: 0px;
+  }
+}

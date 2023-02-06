@@ -1,0 +1,20 @@
+version: "3.7"
+services:
+
+  artyst:
+    build: .
+    command: >
+      sh -c "yarn && yarn start"
+    ports:
+      - 3000:3000
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  nginx:
+    build: nginx
+    ports:
+      - 80:80
+    environment:
+      - NGINX_ENVSUBST_OUTPUT_DIR=/etc/nginx
+      - ARTYST_HOST=artyst
+      - ARTYST_PORT=3000

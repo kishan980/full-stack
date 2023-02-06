@@ -1,0 +1,154 @@
+.file-upload {
+
+  &__button {
+    width: 125px;
+    height: 125px;
+    left: 0;
+    top: 0;
+    border-radius: 15px;
+    background: transparent;
+    position: relative;
+    border: 0;
+
+
+    @media screen and (min-width: 768px) {
+      width: 220px;
+      height: 220px;
+    }
+
+    @media screen and (min-width: 992px) {
+      width: 270px;
+      height: 290px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: 312px;
+      height: 300px;
+    }
+
+    &:focus {
+      outline: 0;
+      background: transparent;
+    }
+
+    &:disabled {
+      opacity: 0.4;
+      filter: grayscale(100%);
+      pointer-events: none;
+    }
+
+    .choose__button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 32px;
+      width: 140px;
+      margin-top: 95px;
+      border-radius: 48px;
+      border: 0;
+      font-size: 10px;
+      line-height: 12px;
+      font-weight: 400;
+      color: #8FCEB9;
+
+      @media screen and (min-width: 768px) {
+        width: 162px;
+        margin-top: 115px;
+        color: black;
+        background: #8FCEB9;
+        font-size: 11px;
+      }
+
+      @media screen and (min-width: 992px) {
+        width: 203px;
+        height: 40px;
+        margin-top: 180px;
+        font-size: 13px;
+        line-height: 15px;
+      }
+
+    }
+
+    .or-drag {
+      display: inline-block;
+      color: #8a8a8a;
+      font-size: 10px;
+      line-height: 12px;
+      font-weight: 400;
+      margin-top: 17px;
+
+      @media screen and (min-width: 1200px) {
+        margin-top: 22px;
+        font-size: 13px;
+        line-height: 15px;
+      }
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  .bgA {
+    background: url("../../../../../../assets/images/bgA.png") 50% 20px / 45% 55% no-repeat;
+
+    @media screen and (min-width: 768px) {
+      background: url("../../../../../../assets/images/bgA.png") 50% 24px / 35% 44% no-repeat;
+    }
+
+    @media screen and (min-width: 992px) {
+      background: url("../../../../../../assets/images/bgA.png") 50% 35px no-repeat;
+    }
+
+    @media screen and (min-width: 1200px) {
+      background: url("../../../../../../assets/images/bgA.png") 50% 43px no-repeat;
+    }
+  }
+
+  .bgB {
+    background: url("../../../../../../assets/images/bgB.png") 50% 20px / 45% 55% no-repeat;
+
+    @media screen and (min-width: 768px) {
+      background: url("../../../../../../assets/images/bgB.png") 50% 24px / 35% 44% no-repeat;
+    }
+
+    @media screen and (min-width: 992px) {
+      background: url("../../../../../../assets/images/bgB.png") 50% 35px no-repeat;
+    }
+
+    @media screen and (min-width: 1200px) {
+      background: url("../../../../../../assets/images/bgB.png") 50% 43px no-repeat;
+    }
+  }
+
+  .bgC {
+    background: url("../../../../../../assets/images/bgC.png") 50% 20px / 45% 55% no-repeat;
+
+    @media screen and (min-width: 768px) {
+      background: url("../../../../../../assets/images/bgC.png") 50% 24px / 35% 44% no-repeat;
+    }
+
+    @media screen and (min-width: 992px) {
+      background: url("../../../../../../assets/images/bgC.png") 50% 35px no-repeat;
+    }
+
+    @media screen and (min-width: 1200px) {
+      background: url("../../../../../../assets/images/bgC.png") 50% 43px no-repeat;
+    }
+  }
+
+  &__input {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 1;
+  }
+}

@@ -1,0 +1,153 @@
+.footer {
+  height: 70px;
+  width: 100%;
+  min-width: 320px;
+  background: #1f2123;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  overflow: hidden;
+
+  @media screen and (min-width: 700px){
+    height: 140px;
+  }
+
+  @media screen and (min-width: 1200px){
+    height: 70px;
+  }
+
+  &__copyright {
+    color: #a3a3a9;
+    position: absolute;
+    left: 8%;
+    font-size: 13px;
+    line-height: 15px;
+    font-weight: 400;
+
+    @media screen and (min-width: 768px){
+      left: 3%;
+      margin: auto 0;
+    }
+  }
+
+  a, a:visited, a:focus, a:hover {
+    text-decoration: none;
+  }
+
+  li {
+    list-style: none;
+
+    a, a:visited, a:focus {
+      color: white;
+      text-decoration: none;
+
+      &:hover {
+        color: #8FCEB9;
+      }
+    }
+  }
+
+  &__help {
+    font-size: 13px;
+    line-height: 15px;
+    font-weight: 400;
+    color: white;
+    display: none;
+    align-items: center;
+    padding: 0;
+
+    @media screen and (min-width: 700px) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    @media screen and (min-width: 1200px) {
+      flex-direction: row;
+    }
+
+    li {
+      margin: 5px 0;
+
+      @media screen and (min-width: 1200px) {
+        margin: 0 10px;
+      }
+    }
+  }
+
+  &__social-medias {
+    width: 280px;
+    height: 70px;
+    padding: 0;
+    flex-wrap: wrap;
+    display: none;
+
+
+    @media screen and (max-width:768){
+    display: flex;
+    margin-left: auto;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+    }
+    @media screen and (min-width: 700px){
+      height: 140px;
+      width: 140px;
+      display: flex;
+      position: absolute;
+      right: 0;
+      border: 0;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 280px;
+      height: 70px;
+    }
+
+    li {
+      border-left: 1px solid #414244;
+      border-bottom: 1px solid #414244;
+      width: 70px;
+      height: 70px;
+      box-sizing: border-box;
+
+      @media screen and (min-width:1px) and (max-width:700px) {
+        width: 35px;
+        height: 85px;        
+      }
+      
+
+      &:hover {
+        filter:  brightness(0) saturate(100%) invert(93%) sepia(6%) saturate(1767%) hue-rotate(99deg) brightness(84%) contrast(90%);
+      }
+
+      a{
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    .instagram{
+      background: url("../../../assets/images/instagram.svg") center no-repeat;
+    }
+
+    .twitter{
+      background: url("../../../assets/images/twitter.svg") center no-repeat;
+    }
+
+    .facebook{
+      background: url("../../../assets/images/facebook.svg") center no-repeat;
+    }
+
+    .linkedin{
+      background: url("../../../assets/images/linkedin.svg") center no-repeat;
+    }
+
+    .pinterest{
+      background: url("../../../assets/images/104469_pinterest_icon.svg") center no-repeat;
+    }
+
+  }
+}

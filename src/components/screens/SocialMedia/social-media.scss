@@ -1,0 +1,75 @@
+.social-media {
+  color: white;
+
+  &__item {
+    height: 43px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    padding: 0;
+    //opacity: 0.4;
+    //filter: grayscale(100%);
+    //background-color: #000;
+    //cursor: not-allowed;
+
+    &--google {
+      background: #5686E6;
+      border: 1px solid #5686E6;
+    }
+
+    &--facebook {
+      background: #415A93;
+      border: 1px solid #415A93;
+      margin: 10px 0;
+    }
+
+    &--apple {
+      background: black;
+      border: 1px solid black;
+    }
+
+    .text {
+      font-size: 13px;
+      line-height: 15px;
+      margin-left: 20px;
+      color: white;
+
+      @media screen and (min-width: 1200px){
+        margin-left: 15px;
+      }
+    }
+  }
+
+  &__logo {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border-radius: 3px 0 0 3px;
+    margin-left: 1px;
+
+    @media screen and (min-width: 1200px){
+      margin-left: 0;
+    }
+
+    &--google {
+      background-color: white;
+    }
+
+    &--facebook {
+      background-color: #4C69A7;
+    }
+
+    &--apple {
+      background-color: #1F1F1F;
+      border: 1px solid #1F1F1F;
+    }
+  }
+}

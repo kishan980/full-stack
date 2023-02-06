@@ -1,0 +1,4 @@
+{
+  "containerName": "sample-nginx",
+  "containerPort": 80
+}

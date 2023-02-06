@@ -1,0 +1,371 @@
+@media screen and (max-width: 768px) {
+  .react-confirm-alert-body {
+    width: 300px;
+  }
+}
+
+.my-collection{
+  background: #151518;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+
+  &__heading{
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 36px;
+    
+    margin-bottom: 30px;
+    text-align: center;
+
+    @media screen and (min-width: 1200px){
+      font-size: 38px;
+      line-height: 46px;
+    }
+  }
+
+  &__description{
+    margin: 30px 0;
+    font-size: 12px;
+    line-height: 17px;
+    font-weight: 400;
+    width: 90%;
+    min-width: 310px;
+    text-align: center;
+
+    @media screen and (min-width: 1200px){
+      width: 762px;
+      font-size: 16px;
+      line-height: 22px;
+    }
+    a, a:visited, a:focus, a:hover {
+      color: white;
+    }
+  }
+
+  &__container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 95%;
+    min-width: 310px;
+
+    @media screen and (min-width: 768px){
+      width: 760px;
+    }
+
+    @media screen and (min-width: 900px){
+      width: 860px;
+    }
+
+    @media screen and (min-width: 1200px){
+      width: 1170px;
+    }
+  }
+
+  &__item{
+    display: flex;
+    flex-direction: column;
+    width: 310px;
+    box-sizing: border-box;
+    margin: 20px auto;
+
+    @media screen and (min-width: 425px){
+      width: 370px;
+    }
+
+    @media screen and (min-width: 768px){
+      margin: 0 5px 50px;
+    }
+
+    @media screen and (min-width: 900px){
+      margin: 0 30px 50px;
+    }
+
+    @media screen and (min-width: 1200px){
+      margin: 0 10px 50px;
+    }
+
+    .collection-img-wrap{
+      position: relative;
+      height: 310px;
+      width: 310px;
+
+      @media screen and (min-width: 425px){
+        height: 370px;
+        width: 370px;
+      }
+
+      img{
+        width: 100%;
+        height: 100%;
+      }
+
+      .remove{
+        position: absolute;
+        right: 0;
+        top: 0;
+        cursor: pointer;
+      }
+
+    }
+
+    .collection-text{
+      display: flex;
+      position: relative;
+
+      .date{
+        color: white;
+        font-size: 13px;
+        line-height: 15px;
+        margin-left: 12px;
+        padding-top: 30px;
+        @media screen and (max-width: 425px) {
+          margin-left: 5px;
+        }
+      }
+      .home-icon{
+        height: 27px;
+        width: 27px;
+        margin-top: 20px;
+        margin-left: 10px;
+        background: url("../../../assets/images/home.svg") center no-repeat;
+        border: 0;
+        cursor: pointer;
+      }
+      .share-icon{
+        height: 27px;
+        width: 27px;
+        margin-top: 20px;
+        background: url("../../../assets/images/Share Icon.svg") center no-repeat;
+        border: 0;
+        cursor: pointer;
+      }
+
+      .share-select {
+
+        .socials {
+          display: none;
+        }
+      }
+
+      .share-select-opened {
+        z-index: 1;
+
+        .socials {
+          position: absolute;
+          top: 60px;
+          left: -55px;
+          display: flex;
+          flex-direction: column;
+          border-collapse: collapse;
+          border-spacing: 0;
+          background-color: #83bcaa;
+          color: black;
+          border-radius: 21px;
+          border: 1px solid black;
+        }
+
+        tr:hover {
+          font-weight: 700;
+          background: #8fceb9;
+          border-radius: 0 0 48px 48px;
+        }
+
+        .first {
+          padding-top: 4px;
+          border-radius: 21px 21px 0 0;
+
+          img {
+            margin-right: 3px;
+            margin-left: 3px;
+            margin-bottom: -4px;
+          }
+        }
+
+        .last {
+          border-radius: 0 0 21px 21px;
+        }
+
+        td {
+          padding-left: 15px;
+          padding-right: 30px;
+          border-bottom: 1px solid black;
+          font-size: 15px;
+          line-height: 21px;
+          white-space: nowrap;
+
+          .divider {
+            display: inline-block;
+            background-color: black;
+            width: 1px;
+            height: 18px;
+            margin: 0 5px;
+          }
+        }
+      }
+
+      .collection-select{
+        width: 122px;
+        min-height: 40px;
+        border-radius: 48px;
+        box-sizing: border-box;
+        position: absolute;
+        right: 0px;
+        top: 15px;
+
+        @media screen and (min-width: 425px){
+          width: 172px;
+        }
+
+        .select-button{
+          color: #8FCEB9;
+          font-size: 15px;
+          line-height: 18px;
+          background: transparent;
+          width: 122px;
+          height: 40px;
+          border: 1px solid #8FCEB9;
+          border-radius: 48px;
+          position: relative;
+          z-index: 1;
+          box-sizing: border-box;
+          padding-top: 3px;
+          &:hover{
+            background: #8fceb9;
+            color: black;
+          }
+          @media screen and (min-width: 425px){
+            width: 170px;
+          }
+
+          //.size-triangle{
+          //  width: 12px;
+          //  height: 10px;
+          //  background: url("../../../assets/images/Path 2 green.png") center no-repeat;
+          //  position: absolute;
+          //  top: 12px;
+          //  right: 12%;
+          //}
+        }
+
+        .disabled{
+          display: none;
+          color: #000000;
+          background-color: #4C4C4C;
+          border: #1C1D1F;
+        }
+
+        .choosen{
+          background: #8fceb9;
+          color: black;
+
+          .size-triangle{
+            background: url("../../../assets/images/Path 2 black.png") center no-repeat;
+          }
+        }
+
+        .sizes{
+          display: none;
+        }
+      }
+
+      .no-border{
+        border: 0;
+      }
+
+      .select-opened{
+        z-index: 1;
+        background: #83bcaa;
+        color: black;
+        border-radius: 21px;
+        border: 1px solid black;
+
+
+        .select-button{
+          color: black;
+          border: 1px solid #83bcaa;
+
+          .size-triangle{
+            display: none;
+          }
+        }
+
+        .sizes{
+          display: flex;
+          flex-direction: column;
+          border-collapse: collapse;
+
+          &__item{
+            width: 100%;
+            padding: 2px 0 2px 10px;
+            cursor: pointer;
+            box-sizing: border-box;
+
+            td{
+              min-width: 20px;
+            }
+          }
+
+          .add--border{
+            border-bottom: 1px solid black;
+          }
+
+          .add--last{
+            border-radius: 0 0 48px 48px;
+          }
+
+          &__item:hover{
+            font-weight: 700;
+            background: #8fceb9;
+          }
+        }
+      }
+    }
+  }
+
+  &__empty{
+    display: flex;
+    font-weight: 700;
+    font-size: 30px;
+    margin: 50px auto;
+
+    @media screen and (min-width: 425px) {
+      font-size: 42px;
+    }
+
+    a, a:visited, a:focus, a:hover {
+      color: white;
+    }
+  }
+
+  &__button{
+    color: black;
+    margin: 60px 0;
+    background: #8FCEB9;
+    border-radius: 56px;
+    border: 0;
+    font-size: 13px;
+    width: 192px;
+    height: 52px;
+    cursor: pointer;
+
+    &:disabled {
+      color: #6A7073;
+      border: 1px solid #6A7073;
+      background: transparent;
+      cursor: default;
+    }
+  }
+}
+.download-btn1{   
+ height: 27px;
+  width: 27px;
+  margin-top: 20px;
+  margin-left: 10px;
+  background: url("../../../assets/images/download-white.svg") center no-repeat;
+  border: 0;
+  cursor: pointer;}
+  

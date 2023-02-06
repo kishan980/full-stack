@@ -1,0 +1,298 @@
+.header-wrapper {
+  width: 100vw;
+  height: 90px;
+  display: flex;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  background: #151518;
+  justify-content: center;
+
+  .header {
+    height: 90px;
+    font-weight: 700;
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    font-size: 13px;
+    position: fixed;
+    top: 0;
+    z-index: 4;
+    background: #151518;
+
+    @media screen and (min-width: 768px) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @media screen and (min-width: 1200px) {
+      background: #131518;
+      width: 1122px;
+    }
+
+    &__logo {
+      width: 191px;
+      height: 79px;
+      margin-top: 5px;
+      margin-left: 20px;
+
+      @media screen and (min-width: 768px) {
+        margin-left: auto;
+      }
+      @media screen and (min-width: 1200px) {
+        margin-left: -20px;
+      }
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      background: #151518;
+    }
+
+    &__burger-button {
+      height: 28px;
+      width: 43px;
+      background: transparent;
+      border: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin: auto 20px auto auto;
+      padding: 0;
+
+      @media screen and (min-width: 768px) {
+        display: none;
+      }
+
+      &__line {
+        width: 100%;
+        border-top: 3px solid #979797;
+      }
+    }
+
+    .nav {
+      display: none;
+
+      @media screen and (min-width: 768px) {
+        display: flex;
+        align-items: center;
+        font-size: 13px;
+        line-height: 15px;
+        font-weight: 400;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 40px 0 0;
+
+        a, a:visited, a:focus {
+          color: white;
+          text-decoration: none;
+          margin-right: 25px;
+
+          &:hover {
+            color: #8FCEB9;
+          }
+
+          @media screen and (min-width: 1200px) {
+            margin-right: 20px;
+          }
+          @media screen and (min-width: 1260px) {
+            margin-right: 40px;
+          }
+        }
+
+        li {
+          list-style: none;
+          text-align: center;
+        }
+
+        .mint {
+          &:hover {
+            color: #8FCEB9;
+          }
+
+          @media screen and (min-width: 768px) {
+            color: #8FCEB9;
+          }
+        }
+      }
+
+      @media screen and (min-width: 880px) {
+      }
+    }
+
+    .my-area {
+      display: none;
+
+      @media screen and (min-width: 768px) {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        margin-right: 20px;
+        ul li {
+          list-style: none;
+        }
+
+        a, a:visited {
+          text-decoration: none;
+          color: black;
+        }
+
+        a:hover {
+          text-decoration: none;
+          color: black;
+        }
+
+        &__button {
+          display: flex;
+          align-items: center;
+          height: 27px;
+          width: 27px;
+          background: transparent;
+          border: 0;
+          cursor: pointer;
+          position: relative;
+          margin: auto 0;
+          padding: 0;
+
+          span {
+            margin: 0 auto;
+            font-size: 12px;
+          }
+
+          img {
+            height: 27px;
+            width: 27px;
+          }
+        }
+
+        &__list {
+          display: none;
+        }
+      }
+    }
+
+    .area-active {
+      display: none;
+
+      @media screen and (min-width: 768px) {
+        display: flex;
+
+        .my-area__list {
+          display: block;
+          background-color: #83bcaa;
+          color: black;
+          position: absolute;
+          top: 55px;
+          right: 20px;
+          width: 90px;
+          border-radius: 21px;
+          border: 1px solid black;
+          align-items: center;
+          padding: 5px;
+          @media screen and (max-width: 1096px) {
+            border-radius: 15px;
+            width: 120px;
+            padding: 0 5px;
+          }
+
+          li {
+            height: 40px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 15px;
+            justify-content: center;
+
+            &:hover {
+              background: #8fceb9;
+              border-radius: 10px;
+            }
+
+            @media screen and (min-width: 1096px) {
+              height: 30px;
+            }
+          }
+        }
+      }
+    }
+
+    .cart {
+      display: flex;
+      position: absolute;
+      top: 32px;
+      right: 80px;
+
+      @media screen and (min-width: 768px) {
+        right: 65px;
+      }
+
+      .cart-icon {
+        width: 25px;
+        height: 26px;
+      }
+
+      .cart-badge {
+        position: absolute;
+        top: -5px;
+        right: -10px;
+        color: white;
+        background-color: red;
+        text-decoration: none;
+        height: 18px;
+        text-align: center;
+        border-radius: 20px;
+        padding-top: 4px;
+        padding-left: 8px;
+        padding-right: 8px;
+      }
+    }
+
+    .iden {
+      display: none;
+
+      @media screen and (min-width: 768px) {
+        display: flex;
+        align-items: center;
+
+        button {
+          font-weight: 400;
+          color: white;
+          height: 40px;
+          width: 222px;
+          font-size: 13px;
+          line-height: 15px;
+          margin-right: 40px;
+          background: transparent;
+          border: 1px solid #131518;
+          cursor: pointer;
+
+          @media screen and (min-width: 1400px) {
+            margin-right: 60px;
+          }
+        }
+
+        .log-in {
+          color: black;
+          font-size: 13px;
+          line-height: 15px;
+          border: 0;
+          background: #8FCEB9;
+          border-radius: 48px;
+          padding-top: 3px;
+
+          &:hover {
+            background-color: white;
+            cursor: pointer;
+          }
+        }
+      }
+
+    }
+  }
+
+}

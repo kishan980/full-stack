@@ -1,0 +1,173 @@
+.my-cart{
+  background: #151518;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+
+  .total-cart-price{
+    font-size: 22px;
+    font-weight: 600;
+  }
+  &__heading{
+    margin: 20px;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 36px;
+    // max-width: 95%;
+    text-align: center;
+
+
+    @media screen and (min-width: 1200px){
+      font-size: 38px;
+      line-height: 46px;
+    }
+  }
+
+  &__description{
+    margin: 0 0 30px 0;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 500;
+    width: 90%;
+    min-width: 310px;
+    text-align: center;
+
+    @media screen and (min-width: 1200px){
+      width: 762px;
+      font-size: 16px;
+      line-height: 22px;
+    }
+    a, a:visited, a:focus, a:hover {
+      color: white;
+    }
+  }
+
+  &__container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 95%;
+    min-width: 310px;
+
+    @media screen and (min-width: 768px){
+      width: 760px;
+    }
+
+    @media screen and (min-width: 900px){
+      width: 860px;
+    }
+
+    @media screen and (min-width: 1200px){
+      width: 1170px;
+    }
+  }
+
+  &__item{
+    display: flex;
+    flex-direction: column;
+    width: 310px;
+    box-sizing: border-box;
+    margin: 20px auto;
+
+    @media screen and (min-width: 425px){
+      width: 370px;
+    }
+
+    @media screen and (min-width: 768px){
+      margin: 0 5px 20px;
+    }
+
+    @media screen and (min-width: 900px){
+      margin: 0 30px 20px;
+    }
+
+    @media screen and (min-width: 1200px){
+      margin: 0 10px 20px;
+    }
+
+    .collection-img-wrap{
+      position: relative;
+      height: 310px;
+      width: 310px;
+
+      @media screen and (min-width: 425px){
+        height: 370px;
+        width: 370px;
+      }
+
+      img{
+        width: 100%;
+        height: 100%;
+      }
+
+      .remove{
+        position: absolute;
+        right: 0;
+        top: 0;
+        cursor: pointer;
+      }
+
+    }
+
+    .cart-text{
+      display: flex;
+      color: white;
+      font-size: 16px;
+      line-height: 15px;
+      margin: 15px;
+      justify-content: space-between;
+      .price-text{
+        font-size: 20px;
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__empty{
+    display: flex;
+    font-weight: 700;
+    font-size: 30px;
+    margin: 50px auto;
+
+    @media screen and (min-width: 425px) {
+      font-size: 42px;
+    }
+
+    a, a:visited, a:focus, a:hover {
+      color: white;
+    }
+  }
+
+  &__button{
+    color: black;
+    margin: 10px 0;
+    background: #8FCEB9;
+    border-radius: 56px;
+    border: 0;
+    font-size: 16px;
+    width: 192px;
+    height: 52px;
+    cursor: pointer;
+
+    &__disabled {
+      color: #a3a3a9;
+      border: 1px solid #a3a3a9;
+      background: transparent;
+      border-radius: 56px;
+      width: 192px;
+      height: 52px;
+      display: flex;
+      justify-content: center;
+      &:hover {
+        background: transparent;
+        border: 1px solid #a3a3a9;
+      }  
+    } 
+    &:hover {
+      background: white;
+      border: 1px solid black;
+    }    
+  }
+
+}

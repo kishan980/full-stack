@@ -1,0 +1,266 @@
+.reg {
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  overflow: hidden;
+
+  &__content{
+    min-height: 70%;
+    max-height: 95%;
+    width: 80%;
+    max-width: 375px;
+    background: white;
+    border-radius: 14px;
+    position:relative;
+    color: black;
+    border: 0;
+    overflow: auto;
+
+    @media screen and (min-width: 1200px){
+      width: 510px;
+      max-width: 100%;
+      min-height: 0;
+    }
+
+    &::-webkit-scrollbar{
+      display: none;
+    }
+  }
+
+  &__body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #a3a3a9;
+    padding: 18px 20px;
+
+    @media screen and (min-width: 1200px){
+      padding: 35px 40px;
+    }
+
+    .sign-up__span{
+      font-size: 28px;
+      line-height: 39px;
+      font-weight: 400;
+      margin-bottom: 10px;
+      color: black;
+
+      @media screen and (min-width: 1200px){
+        margin-bottom: 25px;
+      }
+    }
+
+    .or-text{
+      font-size: 13px;
+      line-height: 18px;
+      font-weight: 400;
+      margin: 5px 0;
+
+      @media screen and (min-width: 1200px) {
+        margin: 10px 0;
+      }
+    }
+
+    .reginfo{
+      box-sizing: border-box;
+      margin: 5px 0;
+      height: 40px;
+      width: 100%;
+      background: transparent;
+      border: 1px solid #a3a3a9;
+      border-radius: 5px;
+      padding-left: 15px;
+      font-size: 15px;
+      font-weight: 400;
+
+      &:focus{
+        outline: none;
+        border: 2px solid #83B1C3;
+      }
+    }
+
+    .password{
+      width: 100%;
+      display: flex;
+      position: relative;
+
+      .show-password-button{
+        display: none;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        right: 5px;
+        top: 7px;
+        width: 9%;
+        height: 35px;
+        cursor: pointer;
+
+        @media screen and (min-width: 1200px){
+          right: 0;
+        }
+
+        &__active{
+          display: flex;
+        }
+      }
+    }
+
+    .incorrect-input{
+      color: #FF0000;
+      align-self: start;
+      font-size: 13px;
+      font-weight: 400;
+      margin: 3px 0;
+    }
+
+    .check{
+      display: flex;
+      margin-top: 5px;
+
+      &__input{
+        display: flex;
+        align-items: center;
+        margin-right: auto;
+        font-weight: 700;
+        color: black;
+        position: relative;
+        height: 18px;
+        padding-left: 22px;
+
+        input{
+          position: absolute;
+          height: 0;
+          width: 0;
+          opacity: 0;
+        }
+
+        .checkmark{
+          display: inline-block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 18px;
+          width: 18px;
+          background: #eee;
+          border-radius: 3px;
+          border: 1px solid #C8C8C8;
+          box-sizing: border-box;
+        }
+
+        input:checked ~ .checkmark{
+          background: #8FCEB9;
+          border: 0;
+        }
+
+        .checkmark:after{
+          content: url("../../../assets/images/check.svg");
+          position: absolute;
+          left: 20%;
+          top: 10%;
+          display: none;
+        }
+
+        input:checked ~ .checkmark:after{
+          display: block;
+        }
+
+        &__text{
+          display: inline-block;
+          font-size: 13px;
+          line-height: 18px;
+          font-weight: 400;
+          position: relative;
+          top: 10%;
+        }
+
+      }
+
+      &__text{
+        margin-left: 10px;
+        color: black;
+        font-size: 13px;
+        line-height: 18px;
+        font-weight: 400;
+
+        a, a:visited, a:focus, a:hover{
+          color: black;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .sign-up-button {
+      height: 40px;
+      width: 160px;
+      background: #8FCEB9;
+      color: black;
+      border-radius: 36px;
+      border: 0;
+      cursor: pointer;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 15px;
+      margin: 10px 0;
+
+      @media screen and (min-width: 1200px){
+        margin: 15px 0;
+      }
+
+      &:hover{
+        background: white;
+        border: 1px solid black;
+      }
+
+      &:disabled {
+        color: #a3a3a9;
+        border: 1px solid #a3a3a9;
+        background: transparent;
+      }
+    }
+
+    a, a:visited, a:focus, a:hover{
+      color: black;
+      text-decoration: none;
+    }
+
+    .line{
+      width: 100%;
+      border-bottom: 1px solid #a3a3a9;
+      margin: 10px 0 15px;
+
+      @media screen and (min-width: 1200px) {
+        margin: 10px 0 20px;
+      }
+    }
+
+    .already{
+      font-size: 15px;
+      line-height: 21px;
+      font-weight: 400;
+    }
+  }
+
+  &__cross{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: url("../../../assets/images/cross.svg") center no-repeat;
+    border: 1px solid white;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+
+  .active{
+    transform: scale(1);
+  }
+}

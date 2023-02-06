@@ -1,0 +1,21 @@
+events {}
+
+http {
+  upstream artyst {
+    server ${ARTYST_HOST}:${ARTYST_PORT};
+  }
+
+  server {
+      server_name www.artyst.ai;
+      return 301 $scheme://artyst.ai$request_uri;
+  }
+
+# a simple reverse-proxy
+  server {
+    listen 80 default_server;
+    location / {
+      # pass requests to the Flask host
+      proxy_pass http://artyst;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "sample-nginx": {
+    "image": ":artyst-web.artyst-nginx-container.305",
+    "command": [],
+    "ports": {
+      "80": "HTTP"
+    },
+    "environment": {
+      "NGINX_ENVSUBST_OUTPUT_DIR": "/etc/nginx",
+      "ARTYST_HOST": "localhost",
+      "ARTYST_PORT": "3000"
+    }
+  },
+  "sample-artyst": {
+    "image": ":artyst-web.artyst-frontend-container.326",
+    "command": ["yarn","start"],
+    "ports": {
+      "3000": "HTTP"
+    },
+    "environment": {
+      "REACT_APP_ARTYST_API_URL": "https://artyst-backend.lc3ftt08g7e16.ap-southeast-2.cs.amazonlightsail.com/api/v1",
+      "REACT_APP_CANVAS_URL": "https://mjgxtm53drnzvrestdnizkwgoa0uhjwk.lambda-url.us-east-1.on.aws",
+      "REACT_APP_CANVAS_ENABLE_HEADER": "0",
+      "REACT_APP_CANVAS_HEADER": "preview",
+      "REACT_APP_GOOGLE_CLIENT_ID": "79439168297-m8emo2dmdhq0apfv3edtr87he4akghhe.apps.googleusercontent.com"
+    }
+  }
+}

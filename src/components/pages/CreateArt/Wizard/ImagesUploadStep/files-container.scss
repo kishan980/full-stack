@@ -1,0 +1,258 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  background-color: #131518;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 70px;
+  }
+
+  @media screen and (min-width: 992px) {
+    margin-bottom: 0;
+  }
+
+  .heading {
+    margin: 0;
+    position: relative;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+      line-height: 46px;
+      margin-top: 15px;
+    }
+
+    .step-title {
+      display: none;
+
+      @media screen and (min-width: 768px) {
+        display: block;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 38px;
+        line-height: 46px;
+      }
+    }
+
+    .info {
+      z-index: 1;
+      position: absolute;
+      top: 0;
+      left: -160px;
+      cursor: pointer;
+
+      @media screen and (min-width: 768px) {
+        position: relative;
+        top: 5px;
+        left: 30px;
+      }
+
+      @media screen and (min-width: 1200px) {
+      }
+    }
+  }
+
+  .sub-heading {
+    display: none;
+
+    @media screen and (min-width: 768px) {
+      display: block;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+
+  .swap-container {
+    position: relative;
+
+    .swap-inactive {
+      display: block;
+      position: absolute;
+      left: -155px;
+
+      @media screen and (min-width: 768px) {
+        display: none;
+      }
+    }
+
+    .swap-active {
+      display: none;
+      position: absolute;
+      left: -155px;
+    }
+
+    .swap-ab {
+      top: 145px
+    }
+    .swap-bc {
+      top: 290px
+    }
+  }
+
+  .files-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    min-width: 350px;
+    margin-top: 35px;
+    margin-bottom: -1px;
+
+    @media screen and (min-width: 768px){
+      flex-direction: row;
+      min-height: 0;
+      min-width: 680px;
+      margin-bottom: 0;
+    }
+
+    @media screen and (min-width: 992px){
+      width: 98%;
+      max-width: 950px;
+    }
+
+    @media screen and (min-width: 1200px){
+      min-width: 1060px;
+    }
+
+    &__item {
+      height: 130px;
+      width: 145px;
+      box-sizing: border-box;
+      background: transparent;
+      margin-bottom: 17px;
+      padding: 8px;
+      background: url("../../../../../assets/images/new-file-upload-background.png") center / 100% 100% no-repeat;
+
+      @media screen and (min-width: 768px){
+        height: 230px;
+        width: 230px;
+      }
+  
+      @media screen and (min-width: 992px){
+        width: 290px;
+        height: 300px;
+      }
+  
+  
+      @media screen and (min-width: 1200px){
+        padding: 12px;
+        width: 340px;
+        height: 300px;
+      }
+
+      &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        box-sizing: border-box;
+      }
+
+      img:hover {
+        opacity: 0.55;
+      }
+
+      & > div:first-of-type {
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+      }
+    }
+
+    .img {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      position: relative;
+
+      .name{
+        display: none;
+
+        @media screen and (min-width: 1200px){
+          display: block;
+          position: absolute;
+          bottom: 7px;
+        }
+      }
+    }
+
+    .delete-button {
+      display: block;
+      position: absolute;
+      z-index: 1;
+      top: 1px;
+      right: 0;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      cursor: pointer;
+      border: 1px solid #6A7073;
+      background: #1C1D1F url("../../../../../assets/images/desktop-delete-cross.svg") center no-repeat;
+
+      @media screen and (min-width: 768px) {
+        top: 5px;
+        right: 6px;
+        width: 32px;
+        height: 32px;
+      }
+
+      @media screen and (min-width: 1200px) {
+        width: 40px;
+        height: 40px;
+        top: 6px;
+        right: 8px;
+      }
+
+      &:hover{
+        background: white url("../../../../../assets/images/desktop-delete-cross – black.svg") center no-repeat;
+      }
+
+    }
+
+    &__image-preview {
+      align-self: center;
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+}
+
+.desc {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5px;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+
+  &__desc {
+    color: #8a8a8a;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+
+    @media screen and (min-width: 1200px){
+      font-size: 18px;
+      line-height: 21px;
+    }
+  }
+
+}
+
+.tooltip_top_cross{
+  position: absolute;
+  top: -32px !important;
+    z-index: -1;
+  left: 277px !important;
+}

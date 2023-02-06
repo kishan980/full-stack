@@ -1,0 +1,133 @@
+.house-modal {
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+  overflow: hidden;
+
+  &__content {
+    background: transparent;
+    color: black;
+    border: 0;
+    overflow: auto;
+    width: 100%;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    .body {
+      width: 100vw;
+      height: calc(100vw * 2731/4096); //0.666 is aspect ratio background image 2731/4096
+      background: url("../../../assets/images/house_new.jpg") center no-repeat;
+      background-size: cover;
+      position: relative;
+      @media (min-width:600px) and (max-width: 1210px) {
+        height: 100% !important;
+      }
+      @media screen and (max-width: 600px) {
+        height: calc(100vw * 2450/1220); //1.97 aspect ratio on mobile 816/414
+        background-image: url("../../../assets/images/house_new.jpg");
+        margin-top: 90px;
+      }
+
+      .buttongroup {
+        display: flex;
+        position: absolute;
+        left: calc(100vw * 228/1680);  //scale left of buttongroup 228/1680
+        top: calc(100vw * 2731/4096 * 154/767);   //scale top of buttongroup 154/677
+
+        @media screen and (max-width: 1194px) {
+          left: calc(100vw * 34/1680);  //scale left of buttongroup 34/1680
+          top: calc(100vw * 2731/4096 * 150/767);
+        }
+        @media screen and (max-width: 600px) {
+          top: calc(100vw * 2450/1220 * 28 / 816);
+          left: calc(100vw * 21 / 414);
+        }
+
+        &__button {
+          width: 49px;
+          height: 49px;
+          color: black;
+          background: transparent;
+          border-radius: 50%;
+          border: 1px solid #1c1d1f;
+          font-size: medium;
+          margin-right: 20px;
+          cursor: pointer;
+          &__selected {
+            background: #1c1d1f;
+            color: white;
+          }
+          &:hover {
+            background: #1c1d1f;
+            color: white;
+          }
+        }
+      }
+          
+      .artgroup {
+        position: absolute;
+        background-size: contain;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: calc(100vw * 345/1680);  //0.2 scale of large art size. 345/1680
+        height: calc(100vw * 345/1680); 
+        top: calc(100vw * 2731/4096 * 138/767) ; //0.2 scale of top artgroup. 138/677
+        right: calc(100vw * 557/1680);      //0.331 scale of right artgroup. 557/1680
+
+
+        @media screen and (max-width: 600px) {
+          width: calc(100vw * 285/414);
+          height: calc(100vw * 285/414);
+          top: calc(100vw * 2450/1220 * 138/816) ; //0.2 scale of top artgroup. 138/677
+          left: calc(100vw * 63 / 414);
+        }
+  
+        &__large{
+          width: 100%;
+          height: 100%;
+          box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
+
+        }
+        &__medium{
+          width: 66.662%;
+          height: 66.662%;
+          box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
+        }
+        &__small{
+          width: 33.255%;
+          height: 33.255%;
+          box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
+        }        
+      } 
+      &__cross {
+        border-radius: 50%;
+        background: url("../../../assets/images/cross.svg") center no-repeat;
+        border: 1px solid #1c1d1f;
+        position: absolute;
+        right: calc(100vw * 0.132); //0.132 is scale right of buttonground 221.69/1680
+        top: calc(100vw * 2731/4096 * 154/767);
+        width: 49px;
+        height: 49px;
+        cursor: pointer;
+
+
+        @media screen and (max-width: 1194px) {
+          top: calc(100vw * 2731/4096 * 150/767);
+          right: calc(100vw * 112.69/1194);  //0.125 is scale right of buttongroup 112.69/1194
+        }
+        @media screen and (max-width: 600px) {
+          top: calc(100vw * 2450/1220 * 28 / 816);
+          right: calc(100vw * 22.69 / 414);
+        }
+
+      }
+    }
+  }
+}
